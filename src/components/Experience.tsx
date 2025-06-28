@@ -2,61 +2,54 @@ import React, { useState } from 'react';
 import { Briefcase, Calendar, ExternalLink } from 'lucide-react';
 
 const Experience = () => {
-  const [activeTab, setActiveTab] = useState('internship');
+  const [activeTab, setActiveTab] = useState('work');
 
   const experiences = {
-    internship: [
+    work: [
       {
-        title: 'Software Engineering Intern',
-        company: 'Tech Company Ltd',
-        period: '2024 - Present',
-        description: 'Developed React applications and worked on Node.js backend services. Collaborated with senior developers on full-stack projects.',
-        skills: ['React', 'Node.js', 'MongoDB', 'Express.js']
+        title: 'Digital Marketing Intern',
+        company: 'Tops Digital Pvt Ltd',
+        period: '2025 - Present',
+        description: 'Assisting in digital marketing strategies, managing social media accounts, and creating content for various platforms. Collaborating with the marketing team to enhance online presence and engagement.',
+        skills: ['Content creation', 'Social media handling']
       },
       {
-        title: 'Junior Developer Intern',
-        company: 'Startup Inc',
-        period: '2023 - 2024',
-        description: 'Built responsive web interfaces and implemented RESTful APIs. Gained experience in modern web development practices.',
-        skills: ['HTML/CSS', 'JavaScript', 'React', 'API Integration']
+        title: 'Information and Communication Technology Technician',
+        company: 'Ministry of Ports & Shipping - Merchant Shipping Secretariat ',
+        period: '2022 - 2023',
+        description: 'Worked as a trainee ICT technician, providing technical support for office systems. Assisted in troubleshooting hardware and software issues, managed databases using Microsoft Access, and supported document preparation and presentations with Microsoft Office tools.',
+        skills: ['Microsoft Office', 'Powerpoint', 'Excel', 'Access']
       }
     ],
     freelance: [
       {
-        title: 'Freelance Web Developer',
-        company: 'Self-Employed',
-        period: '2023 - Present',
-        description: 'Created custom websites for small businesses and startups. Delivered mobile-responsive solutions with modern design.',
-        skills: ['React', 'Tailwind CSS', 'Firebase', 'Responsive Design']
-      },
-      {
-        title: 'E-commerce Developer',
-        company: 'Various Clients',
-        period: '2023',
-        description: 'Built online stores with payment integration and inventory management systems.',
-        skills: ['Next.js', 'Stripe API', 'Database Design', 'Payment Integration']
+        title: 'ගොඩයන Jobs . LK',
+        company: 'Job Vacancy Web Application',
+        period: '2025',
+        description: 'Developed a comprehensive job vacancy web application allowing users to browse and find job opportunities across various categories. Included detailed job descriptions, information on overseas jobs and visas, and integrated online courses for skill development. Designed to be fully responsive and user-friendly.',
+        skills: ['React', 'Node.js', 'Express.js', 'MongoDB']
       }
     ],
     academic: [
-      {
-        title: 'Team Lead - Final Year Project',
-        company: 'University of Sri Jayawardhana Pura',
-        period: '2024',
-        description: 'Leading a team of 4 students in developing a comprehensive web application for university management.',
-        skills: ['Project Management', 'Full-Stack Development', 'Team Leadership', 'MERN Stack']
-      },
-      {
-        title: 'Research Assistant',
-        company: 'Faculty of Technology',
-        period: '2023 - 2024',
-        description: 'Assisted professors in web development research and helped junior students with programming concepts.',
-        skills: ['Research', 'Teaching', 'Web Technologies', 'Documentation']
-      }
+        {
+    title: 'Hallmate - Lecture Hall Booking System',
+    company: 'University Group Project',
+    period: '2024',
+    description: 'Developed a web-based lecture hall booking system where lecturers can view timetables and book halls for extra sessions. Students can check schedules and available lectures. Built as a group project to streamline campus resource management.',
+    skills: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript']
+  },
+  {
+    title: 'Smart Eye Glasses for Blind People',
+    company: 'University IoT Group Project',
+    period: '2024',
+    description: 'Created smart glasses designed to assist visually impaired individuals. The system uses sensors to detect nearby barriers and provides auditory alerts. In emergencies, users can press a button to send their location and a help request to family members.',
+    skills: ['IoT', 'Embedded Systems', 'Arduino','Sensors']
+  }
     ]
   };
 
   const tabs = [
-    { id: 'internship', label: 'Internships', icon: Briefcase },
+    { id: 'work', label: 'Work', icon: Briefcase },
     { id: 'freelance', label: 'Freelance', icon: ExternalLink },
     { id: 'academic', label: 'Academic', icon: Calendar }
   ];

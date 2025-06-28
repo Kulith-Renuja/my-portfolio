@@ -10,7 +10,7 @@ import Certificates from './components/Certificates';
 
 function App() {
   return (
-    <div className="min-h-screen scroll-smooth">
+     <div className="min-h-screen">
       <Navigation />
       <Hero />
       <Experience />

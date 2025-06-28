@@ -1,9 +1,20 @@
 import React from 'react';
 import { Download, Mail, MapPin, GraduationCap } from 'lucide-react';
+import myCV from '../assets/my-cv.pdf';
+import profileImage from '../assets/profile.jpg';
 
 const Hero = () => {
   const handleDownloadCV = () => {
-    alert('CV download functionality will be implemented with actual CV file');
+    // Create a temporary link
+    const link = document.createElement('a');
+    link.href = myCV;
+    link.download = 'My-CV.pdf'; // This will be the name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Alert user
+   alert('CV downloaded successfully!');
   };
 
   const handleContactMe = () => {
@@ -46,7 +57,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 bg-green-900 px-4 py-2 rounded-full shadow-md">
                 <MapPin className="text-green-300" size={20} />
-                <span className="text-white/90">Sri Lanka</span>
+                <span className="text-white/90">Kalutara</span>
               </div>
             </div>
 
@@ -74,12 +85,11 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-green-900 to-black p-2 shadow-2xl">
                 <div className="w-full h-full rounded-full bg-neutral-900 flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-neutral-800 to-black flex items-center justify-center text-gray-400">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-green-700 rounded-full mx-auto mb-4"></div>
-                      <p className="text-sm">Your Photo Here</p>
-                    </div>
-                  </div>
+                  <img
+    src={profileImage}
+    alt="My Profile"
+    className="w-full h-full object-cover rounded-full"
+  />
                 </div>
               </div>
 
