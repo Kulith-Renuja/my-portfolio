@@ -46,13 +46,13 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="py-20 bg-purple-300">
+    <section id="certificates" className="py-20 bg-gradient-to-br from-black via-gray-900 to-green-950 text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Certificates & Achievements
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Professional certifications and academic achievements that validate my technical expertise
           </p>
         </div>
@@ -61,7 +61,7 @@ const Certificates = () => {
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+              className="bg-neutral-900 border border-green-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -69,32 +69,32 @@ const Certificates = () => {
                   alt={cert.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg">
-                  <Award className="text-orange-500" size={24} />
+                <div className="absolute top-4 right-4 bg-green-900 rounded-full p-2 shadow-lg">
+                  <Award className="text-green-400" size={24} />
                 </div>
               </div>
 
               <div className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{cert.title}</h3>
-                    <p className="text-blue-600 font-semibold">{cert.issuer}</p>
+                    <h3 className="text-xl font-bold text-white mb-1">{cert.title}</h3>
+                    <p className="text-green-400 font-semibold">{cert.issuer}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-gray-500 text-sm bg-gray-100 px-3 py-1 rounded-full">
+                  <div className="flex items-center gap-1 text-gray-300 bg-gray-800 px-3 py-1 rounded-full text-sm">
                     <Calendar size={14} />
                     {cert.date}
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">{cert.description}</p>
+                <p className="text-gray-400 mb-4 leading-relaxed">{cert.description}</p>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500 font-mono bg-gray-100 px-2 py-1 rounded">
+                  <span className="text-sm text-green-300 font-mono bg-green-800/20 px-2 py-1 rounded">
                     ID: {cert.credentialId}
                   </span>
                   <button
                     onClick={() => handleViewCredential(cert.credentialId)}
-                    className="flex items-center gap-1 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+                    className="flex items-center gap-1 text-green-400 hover:text-green-300 font-semibold transition-colors"
                   >
                     <ExternalLink size={16} />
                     View Credential
@@ -109,7 +109,7 @@ const Certificates = () => {
         <div className="text-center mt-12">
           <button
             onClick={handleMoreClick}
-            className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-green-800 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-green-500 transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             View All Certificates
           </button>

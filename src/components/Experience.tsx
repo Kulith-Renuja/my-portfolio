@@ -61,78 +61,73 @@ const Experience = () => {
     { id: 'academic', label: 'Academic', icon: Calendar }
   ];
 
-  const handleMoreClick = () => {
-    alert('This would navigate to a detailed experience page or open a modal with all experiences');
-  };
-
   return (
-    <section id="experience" className="py-20 bg-gray-700 text-white">
-  <div className="container mx-auto px-6">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl lg:text-5xl font-bold mb-4">My Experience</h2>
-      <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-        A journey through various roles and projects that shaped my development as a software engineer
-      </p>
-    </div>
+    <section id="experience" className="py-20 bg-gradient-to-br from-black via-gray-900 to-green-950 text-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+            My Experience
+          </h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            A journey through various roles and projects that shaped my development as a software engineer
+          </p>
+        </div>
 
-    <div className="max-w-4xl mx-auto">
-      {/* Tab Navigation */}
-      <div className="flex flex-wrap justify-center gap-2 mb-8">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-              activeTab === tab.id
-                ? 'bg-gray-600 text-white shadow-lg'
-                : 'bg-gray-800 text-gray-300 hover:bg-gray-900'
-            }`}
-          >
-            <tab.icon size={20} />
-            {tab.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Experience Content */}
-      <div className="space-y-8">
-        {experiences[activeTab as keyof typeof experiences].map((exp, index) => (
-          <div
-            key={index}
-            className="bg-gray-800 rounded-xl p-8 hover:shadow-lg transition-all duration-300 border border-gray-700"
-          >
-            <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                <p className="text-lg text-indigo-400 font-semibold">{exp.company}</p>
-              </div>
-              <div className="flex items-center gap-2 text-gray-400 bg-gray-700 px-4 py-2 rounded-lg">
-                <Calendar size={16} />
-                <span className="font-medium">{exp.period}</span>
-              </div>
-            </div>
-
-            <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
-
-            <div className="flex flex-wrap gap-2">
-              {exp.skills.map((skill, skillIndex) => (
-                <span
-                  key={skillIndex}
-                  className="px-3 py-1 bg-indigo-700/20 text-indigo-300 rounded-full text-sm font-medium"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+        <div className="max-w-4xl mx-auto">
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                  activeTab === tab.id
+                    ? 'bg-green-800 text-white shadow-lg'
+                    : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700'
+                }`}
+              >
+                <tab.icon size={20} />
+                {tab.label}
+              </button>
+            ))}
           </div>
-        ))}
+
+          {/* Experience Content */}
+          <div className="space-y-8">
+            {experiences[activeTab as keyof typeof experiences].map((exp, index) => (
+              <div
+                key={index}
+                className="bg-neutral-900 rounded-xl p-8 hover:shadow-xl transition-all duration-300 border border-green-800"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
+                    <p className="text-lg text-green-400 font-semibold">{exp.company}</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-400 bg-gray-800 px-4 py-2 rounded-lg">
+                    <Calendar size={16} />
+                    <span className="font-medium">{exp.period}</span>
+                  </div>
+                </div>
+
+                <p className="text-gray-300 mb-6 leading-relaxed">{exp.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {exp.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1 bg-green-700/20 text-green-300 rounded-full text-sm font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-      
-    </div>
-  </div>
-</section>
-
+    </section>
   );
 };
 
