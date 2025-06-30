@@ -4,10 +4,10 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Job Vacancy Web Application-ගොඩයන Jobs . LK",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, cart management, and order processing.",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "Tailwind CSS"],
+      technologies: ["React", "Node.js", "MongoDB", "Express.js"],
       github: "#",
       demo: "#",
       featured: true

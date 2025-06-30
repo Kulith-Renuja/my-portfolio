@@ -12,22 +12,6 @@ const Certificates = () => {
       credentialId: 'META-REACT-2024-001'
     },
     {
-      title: 'Node.js Application Development',
-      issuer: 'IBM',
-      date: '2023',
-      description: 'Backend development with Node.js, Express.js, and database integration best practices.',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
-      credentialId: 'IBM-NODE-2023-456'
-    },
-    {
-      title: 'Full Stack Web Development',
-      issuer: 'University of Sri Jayawardhana Pura',
-      date: '2023',
-      description: 'Complete web development course covering frontend, backend, and deployment strategies.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      credentialId: 'USJP-FS-2023-789'
-    },
-    {
       title: 'JavaScript Algorithms and Data Structures',
       issuer: 'freeCodeCamp',
       date: '2022',
