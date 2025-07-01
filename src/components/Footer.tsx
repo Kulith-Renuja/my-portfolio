@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         <div className="text-center">
           <div className="mb-8">
             <div className="text-2xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent mb-4">
-              Alex Johnson
+              Kulith Renuja
             </div>
             <p className="text-gray-400 max-w-md mx-auto">
               Full Stack Developer passionate about creating amazing web experiences
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
 
           <div className="border-t border-green-800 pt-8">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Alex Johnson. All rights reserved.
+              © {new Date().getFullYear()} Kulith Renuja. All rights reserved.
             </p>
           </div>
         </div>

@@ -41,7 +41,7 @@ const Hero = () => {
                 </span>
               </h1>
               <h2 className="text-2xl lg:text-3xl text-white/80 font-medium mb-6">
-                Software Engineer | React & Node.js Developer
+                Software Engineer | Full Stack Developer
               </h2>
               <p className="text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Final year BICT student at University of Sri Jayewardenepura, passionate about building
