@@ -1,32 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
+import certificate1 from '../assets/certificate_1.jpg';
+
 
 const Certificates = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCert, setSelectedCert] = useState<any>(null);
+
   const certificates = [
     {
-      title: 'React Developer Certification',
-      issuer: 'Meta (Facebook)',
-      date: '2024',
-      description: 'Comprehensive certification covering React fundamentals, hooks, state management, and advanced patterns.',
-      image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
-      credentialId: 'META-REACT-2024-001'
-    },
-    {
-      title: 'JavaScript Algorithms and Data Structures',
-      issuer: 'freeCodeCamp',
-      date: '2022',
-      description: 'Advanced JavaScript concepts, algorithms, and data structure implementations.',
-      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800',
-      credentialId: 'FCC-JS-2022-123'
+      title: 'Certificate of Appreciation - J\'Pura CryptX 1.0',
+      issuer: 'Information and Communication Technology Society, University of Sri Jayewardenepura',
+      date: '2025',
+      description: 'Awarded in recognition of outstanding support as a Media and Marketing Team Member for J\'Pura CryptX 1.0, an event organized by the ICT Society.',
+      image: certificate1, // Replace with your actual certificate image if you have one
+      credentialId: 'CRYPTX-2025-KRG001'
     }
   ];
 
-  const handleMoreClick = () => {
+  /*const handleMoreClick = () => {
     alert('This would navigate to a detailed certificates page or open a modal with all certificates');
-  };
+  };*/
 
   const handleViewCredential = (credentialId: string) => {
-    alert(`View credential: ${credentialId}`);
+     const cert = certificates.find(c => c.credentialId === credentialId);
+    setSelectedCert(cert);
+    setModalOpen(true);
   };
 
   return (
@@ -51,7 +50,7 @@ const Certificates = () => {
                 <img
                   src={cert.image}
                   alt={cert.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-top object-cover transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute top-4 right-4 bg-green-900 rounded-full p-2 shadow-lg">
                   <Award className="text-green-400" size={24} />
@@ -89,7 +88,7 @@ const Certificates = () => {
           ))}
         </div>
 
-        {/* More Button */}
+        {/* More Button 
         <div className="text-center mt-12">
           <button
             onClick={handleMoreClick}
@@ -97,8 +96,30 @@ const Certificates = () => {
           >
             View All Certificates
           </button>
-        </div>
+        </div>*/}
       </div>
+      {modalOpen && selectedCert && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-md flex items-center justify-center z-50">
+          <div className="bg-neutral-900 border border-green-800 rounded-xl max-w-3xl w-full relative overflow-hidden shadow-lg">
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 text-green-400 hover:text-green-300 bg-neutral-800 rounded-full p-2 transition-colors"
+            >
+              ✕
+            </button>
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className="w-full max-h-[80vh] object-contain bg-black"
+            />
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-white mb-2">{selectedCert.title}</h3>
+              <p className="text-green-400 font-semibold mb-2">{selectedCert.issuer}</p>
+              <p className="text-gray-300">{selectedCert.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

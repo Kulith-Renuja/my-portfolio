@@ -4,7 +4,7 @@ A sleek and responsive personal portfolio website built with **React**, **Vite**
 
 ## 🔗 Live Demo
 
-[Click here to view the live site](https://github.com/Kulith-Renuja/my-portfolio?tab=readme-ov-file)
+[Click here to view the live site](https://my-portfolio-kulith.vercel.app)
 
 ---
 

@@ -1,14 +1,16 @@
 import React from 'react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import project1 from '../assets/project_1.png';
+
 
 const Projects: React.FC = () => {
   const projects = [
     {
       title: "Job Vacancy Web Application-ගොඩයන Jobs . LK",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, cart management, and order processing.",
-      image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+      image: project1,
       technologies: ["React", "Node.js", "MongoDB", "Express.js"],
-      github: "#",
+      github: "https://github.com/Kulith-Renuja/job-portal-frontend.git",
       demo: "#",
       featured: true
     },
@@ -26,34 +28,7 @@ const Projects: React.FC = () => {
       description: "A beautiful weather dashboard with location-based forecasts, interactive charts, and responsive design for all devices.",
       image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Vue.js", "Chart.js", "OpenWeather API", "Vuetify"],
-      github: "#",
-      demo: "#",
-      featured: false
-    },
-    {
-      title: "Social Media Analytics",
-      description: "A comprehensive analytics dashboard for social media performance tracking with data visualization and reporting features.",
-      image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL"],
-      github: "#",
-      demo: "#",
-      featured: false
-    },
-    {
-      title: "Recipe Sharing Platform",
-      description: "A community-driven recipe sharing platform with user profiles, recipe ratings, and advanced search functionality.",
-      image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Next.js", "Supabase", "Tailwind CSS", "TypeScript"],
-      github: "#",
-      demo: "#",
-      featured: false
-    },
-    {
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and optimized performance.",
-      image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      github: "#",
+      github: "https://github.com/Kulith-Renuja/job-portal-frontend.git",
       demo: "#",
       featured: false
     }

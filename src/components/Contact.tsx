@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      details: "San Francisco, CA",
+      details: "Kalutara,Sri Lanka",
       link: "#"
     }
   ];
@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
     {
       icon: <Github className="w-6 h-6" />,
       name: "GitHub",
-      url: "https://github.com/Kulith-Renuja?tab=repositories",
+      url: "https://github.com/Kulith-Renuja",
       color: "hover:text-gray-300"
     },
     {
