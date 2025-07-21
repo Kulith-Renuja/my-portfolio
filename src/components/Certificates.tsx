@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
 import certificate1 from '../assets/certificate_1.jpg';
+import certificate2 from '../assets/certificate_2.jpg';
 
 
 const Certificates = () => {
@@ -13,8 +14,16 @@ const Certificates = () => {
       issuer: 'Information and Communication Technology Society, University of Sri Jayewardenepura',
       date: '2025',
       description: 'Awarded in recognition of outstanding support as a Media and Marketing Team Member for J\'Pura CryptX 1.0, an event organized by the ICT Society.',
-      image: certificate1, // Replace with your actual certificate image if you have one
+      image: certificate1, 
       credentialId: 'CRYPTX-2025-KRG001'
+    },
+    {
+      title: 'Certificate of Participation - KULITH RENUJA Event',
+      issuer: 'Organizing Committee (Assumed or fill in actual name)',
+      date: '2025',
+      description: 'Recognized participation in the KULITH RENUJA event. Awarded to Pruthivithejan for their involvement and contributions.',
+      image: certificate2,
+      credentialId: 'RENUJA-2025-PRU001'
     }
   ];
 
