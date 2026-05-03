@@ -9,14 +9,14 @@ const Experience = () => {
       {
         title: 'Digital Marketing Intern',
         company: 'Tops Digital Pvt Ltd',
-        period: '2025 - Present',
+        period: '2025 Apl - 2025 Oct',
         description: 'Assisting in digital marketing strategies, managing social media accounts, and creating content for various platforms. Collaborating with the marketing team to enhance online presence and engagement.',
         skills: ['Content creation', 'Social media handling']
       },
       {
         title: 'Information and Communication Technology Technician',
         company: 'Ministry of Ports & Shipping - Merchant Shipping Secretariat ',
-        period: '2022 - 2023',
+        period: '2022 Jan - 2022 Jun',
         description: 'Worked as a trainee ICT technician, providing technical support for office systems. Assisted in troubleshooting hardware and software issues, managed databases using Microsoft Access, and supported document preparation and presentations with Microsoft Office tools.',
         skills: ['Microsoft Office', 'Powerpoint', 'Excel', 'Access']
       }
@@ -55,7 +55,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-br from-black via-gray-900 to-green-950 text-white">
+    <section id="experience" className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">

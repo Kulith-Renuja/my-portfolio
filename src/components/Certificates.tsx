@@ -38,7 +38,7 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="py-20 bg-gradient-to-br from-black via-gray-900 to-green-950 text-white">
+    <section id="certificates" className="py-20 bg-black text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">

@@ -1,35 +1,37 @@
 import React from 'react';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import project1 from '../assets/project_1.png';
+import project2 from '../assets/project_2.png';
+import project3 from '../assets/project_3.png';
 
 
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: "Job Vacancy Web Application-ගොඩයන Jobs . LK",
+      title: "Job Vacancy Web Application",
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, cart management, and order processing.",
       image: project1,
       technologies: ["React", "Node.js", "MongoDB", "Express.js"],
       github: "https://github.com/Kulith-Renuja/job-portal-frontend.git",
-      demo: "#",
+      demo: "https://www.godayana.lk/",
       featured: true
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      github: "#",
-      demo: "#",
+      title: "AI-Powered Mobility Assistant for the Visually Impaired",
+      description: "An advanced, multimodal Flutter application designed to provide seamless indoor and outdoor navigation for visually impaired users. This project combines custom A* graph-based indoor routing, GPS-driven outdoor navigation, and a highly memory-optimized headless YOLOv8 machine learning model to act as a real-time hazard guardian.",
+      image: project2,
+      technologies: ["Flutter", "Firebase", "YoloNanoV8"],
+      github: "https://github.com/Kulith-Renuja/Navigation-system",
+      demo: "https://drive.google.com/drive/folders/1vC3CRRthqVMVig52CcZfypMEWf5REGZn",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "A beautiful weather dashboard with location-based forecasts, interactive charts, and responsive design for all devices.",
-      image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-      technologies: ["Vue.js", "Chart.js", "OpenWeather API", "Vuetify"],
-      github: "https://github.com/Kulith-Renuja/job-portal-frontend.git",
-      demo: "#",
+      title: "Digital marketing agency portfolio",
+      description: "A polished digital marketing agency portfolio built using HTML, CSS, and PHP highlights specialized services like SEO, social media management, and paid ad campaigns to convert visitors into clients. It features modern, responsive designs customized from templates, showcasing case studies, client testimonials, and a clear call-to-action.",
+      image: project3,
+      technologies: ["HTML", "CSS", "PHP"],
+      github: "https://github.com/Kulith-Renuja/digital-agency-portfolio",
+      demo: "https://kulith-renuja.github.io/digital-agency-portfolio/",
       featured: false
     }
   ];
@@ -39,7 +41,7 @@ const Projects: React.FC = () => {
 
   return (
     <section id="projects" className="py-20 relative overflow-hidden bg-secondary-900">
-      <div className="absolute inset-0 bg-gradient-to-br from-secondary-900 to-black">
+      <div className="absolute inset-0 bg-black">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'30\' height=\'30\' viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.02\'%3E%3Ccircle cx=\'15\' cy=\'15\' r=\'2\'/%3E%3Ccircle cx=\'5\' cy=\'15\' r=\'1\'/%3E%3Ccircle cx=\'25\' cy=\'15\' r=\'1\'/%3E%3Ccircle cx=\'15\' cy=\'5\' r=\'1\'/%3E%3Ccircle cx=\'15\' cy=\'25\' r=\'1\'/%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
       </div>
       
